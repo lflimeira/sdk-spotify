@@ -1,0 +1,24 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "description": "Biblioteca TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lflimeira/js-tdd-studies.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "lflimeira <lflimeira02@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lflimeira/js-tdd-studies/issues"
+  },
+  "homepage": "https://github.com/lflimeira/js-tdd-studies#readme"
+}
