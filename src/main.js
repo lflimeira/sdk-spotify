@@ -6,4 +6,4 @@ function sum() {
   return a + b + c;
 }
 
-sum()
+sum();
