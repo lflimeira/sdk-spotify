@@ -2,6 +2,7 @@ import chai, { expect } from 'chai'
 import sinon from 'sinon'
 import sinonChai from 'sinon-chai'
 import sinonStubPromise from 'sinon-stub-promise'
+import { API_URL } from '../src/config'
 chai.use(sinonChai)
 sinonStubPromise(sinon)
 
@@ -15,7 +16,7 @@ import {
   searchPlaylists
 } from '../src/main'
 
-describe('Spotify Wrapper', () => {
+describe('Search', () => {
 
   let fetchedStub
   let promise
@@ -65,17 +66,17 @@ describe('Spotify Wrapper', () => {
       context('passing one type', () => {
         const artists = search('Incubus','artist')
         expect(fetchedStub).to.have.been
-          .calledWith('https://api.spotify.com/v1/search?q=Incubus&type=artist')
+          .calledWith(`${API_URL}/search?q=Incubus&type=artist`)
 
         const albuns = search('Incubus', 'album')
         expect(fetchedStub).to.have.been
-          .calledWith('https://api.spotify.com/v1/search?q=Incubus&type=album')
+          .calledWith(`${API_URL}/search?q=Incubus&type=album`)
       })
       
       context('passing more than one type', () => {
         const artistsAndAlbums = search('Incubus',['artist', 'album'])
         expect(fetchedStub).to.have.been
-          .calledWith('https://api.spotify.com/v1/search?q=Incubus&type=artist,album')
+          .calledWith(`${API_URL}/search?q=Incubus&type=artist,album`)
       })
     
       it('should return the JSON data from the promise', () => {
@@ -94,10 +95,10 @@ describe('Spotify Wrapper', () => {
 
     it('should call fetch with the correct URL', () => {
       const artists = searchArtists('Incubus')
-      expect(fetchedStub).to.have.been.calledWith('https://api.spotify.com/v1/search?q=Incubus&type=artist')
+      expect(fetchedStub).to.have.been.calledWith(`${API_URL}/search?q=Incubus&type=artist`)
 
       const artists2 = searchArtists('Muse')
-      expect(fetchedStub).to.have.been.calledWith('https://api.spotify.com/v1/search?q=Muse&type=artist')
+      expect(fetchedStub).to.have.been.calledWith(`${API_URL}/search?q=Muse&type=artist`)
     })
   })
 
@@ -109,10 +110,10 @@ describe('Spotify Wrapper', () => {
 
     it('should call fetch with the correct URL', () => {
       const albums = searchAlbums('Incubus')
-      expect(fetchedStub).to.have.been.calledWith('https://api.spotify.com/v1/search?q=Incubus&type=album')
+      expect(fetchedStub).to.have.been.calledWith(`${API_URL}/search?q=Incubus&type=album`)
 
       const albums2 = searchAlbums('Muse')
-      expect(fetchedStub).to.have.been.calledWith('https://api.spotify.com/v1/search?q=Muse&type=album')
+      expect(fetchedStub).to.have.been.calledWith(`${API_URL}/search?q=Muse&type=album`)
     })
   })
   
@@ -124,10 +125,10 @@ describe('Spotify Wrapper', () => {
 
     it('should call fetch with the correct URL', () => {
       const tracks = searchTracks('Incubus')
-      expect(fetchedStub).to.have.been.calledWith('https://api.spotify.com/v1/search?q=Incubus&type=track')
+      expect(fetchedStub).to.have.been.calledWith(`${API_URL}/search?q=Incubus&type=track`)
 
       const tracks2 = searchTracks('Muse')
-      expect(fetchedStub).to.have.been.calledWith('https://api.spotify.com/v1/search?q=Muse&type=track')
+      expect(fetchedStub).to.have.been.calledWith(`${API_URL}/search?q=Muse&type=track`)
     })
   })
   
@@ -139,10 +140,10 @@ describe('Spotify Wrapper', () => {
 
     it('should call fetch with the correct URL', () => {
       const playlist = searchPlaylists('Incubus')
-      expect(fetchedStub).to.have.been.calledWith('https://api.spotify.com/v1/search?q=Incubus&type=playlist')
+      expect(fetchedStub).to.have.been.calledWith(`${API_URL}/search?q=Incubus&type=playlist`)
 
       const playlist2 = searchPlaylists('Muse')
-      expect(fetchedStub).to.have.been.calledWith('https://api.spotify.com/v1/search?q=Muse&type=playlist')
+      expect(fetchedStub).to.have.been.calledWith(`${API_URL}/search?q=Muse&type=playlist`)
     })
   })
 })
