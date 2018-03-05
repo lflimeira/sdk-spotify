@@ -14,7 +14,7 @@ import {
   searchArtists,
   searchTracks,
   searchPlaylists
-} from '../src/main'
+} from '../src/search'
 
 describe('Search', () => {
 
