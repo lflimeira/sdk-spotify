@@ -9,6 +9,9 @@ export default {
     libraryTarget: 'umd',
     library: 'spotifyWrapper',
   },
+  node: {
+   fs: "empty"
+  },
   devtool: 'source-map',
   module: {
     loaders: [
