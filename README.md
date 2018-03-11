@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lflimeira/js-tdd-studies.svg?branch=master)](https://travis-ci.org/lflimeira/js-tdd-studies)
+[![Build Status](https://travis-ci.org/lflimeira/js-tdd-studies.svg?branch=master)](https://travis-ci.org/lflimeira/js-tdd-studies) [![Coverage Status](https://coveralls.io/repos/github/lflimeira/js-tdd-studies/badge.svg?branch=master)](https://coveralls.io/github/lflimeira/js-tdd-studies?branch=master)
 
 # Spotify Wrapper
 
