@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lflimeira/js-tdd-studies.svg?branch=master)](https://travis-ci.org/lflimeira/js-tdd-studies)
+
 # Spotify Wrapper
 
 A wrapper to work with the [Spotify Web API](https://developer.spotify.com/web-api/).
