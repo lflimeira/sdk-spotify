@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/lflimeira/js-tdd-studies.svg?branch=master)](https://travis-ci.org/lflimeira/js-tdd-studies) [![Coverage Status](https://coveralls.io/repos/github/lflimeira/js-tdd-studies/badge.svg?branch=master)](https://coveralls.io/github/lflimeira/js-tdd-studies?branch=master)
 
-# Spotify Wrapper
+# Spotify SDK
 
 A wrapper to work with the [Spotify Web API](https://developer.spotify.com/web-api/).
 
@@ -19,7 +19,7 @@ This library depends on [fetch](https://fetch.spec.whatwg.org/) to make requests
 ## Installation
 
 ```sh
-$ npm install spotify-wrapper --save
+$ npm install sdk-spotify --save
 ```
 
 ## How to use
