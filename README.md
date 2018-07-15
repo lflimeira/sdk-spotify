@@ -2,7 +2,7 @@
 
 # Spotify SDK
 
-A wrapper to work with the [Spotify Web API](https://developer.spotify.com/web-api/).
+A wrapper to work with the [Spotify Web API](https://developer.spotify.com/web-api/)
 
 ## Browser Support
 
